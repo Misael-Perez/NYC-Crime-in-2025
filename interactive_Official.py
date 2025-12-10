@@ -74,7 +74,10 @@ folium.Choropleth(
     fill_color="YlOrRd",
     fill_opacity=0.7,
     line_opacity=0.2,
-    legend_name="Crime Count by ZIP"
+    legend_name="Crime Count by ZIP",
+    name="Total Crimes",
+    overlay=True,
+    control=True
 ).add_to(m)
 
 types = [
@@ -123,7 +126,9 @@ for name in types_top_10:
     fill_opacity=0.7,
     line_opacity=0.2,
     legend_name=f"{name} Count by ZIP",
-    name=name
+    name=name,
+    overlay=False,
+    control=True
     ).add_to(m)
     
  
